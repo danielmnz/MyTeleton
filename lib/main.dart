@@ -16,15 +16,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = MaterialTheme(
-      Typography.material2021().black,
-    );
 
     TextTheme textTheme = createTextTheme(
       context,
       "Inter",
       "ADLaM Display",
     );
+
+    MaterialTheme theme = MaterialTheme(textTheme);
 
     return MaterialApp(
       title: 'MyTeleton',
