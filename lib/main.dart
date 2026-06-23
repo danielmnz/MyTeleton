@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:myteleton/ui/screens/home_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:myteleton/firebase_options.dart';
+import 'package:myteleton/ui/theme/theme.dart';
+import 'package:myteleton/ui/theme/util.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,21 +16,21 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = MaterialTheme(
+      Typography.material2021().black,
+    );
+
+    TextTheme textTheme = createTextTheme(
+      context,
+      "Inter",
+      "ADLaM Display",
+    );
+
     return MaterialApp(
       title: 'MyTeleton',
       debugShowCheckedModeBanner: false,
 
-      theme: ThemeData(
-        useMaterial3: true,
-
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
-
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.red,
-          foregroundColor: Colors.white,
-          centerTitle: true,
-        ),
-      ),
+      theme: theme.light(),
 
       home: const HomeScreen(),
     );
