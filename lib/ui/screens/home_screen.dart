@@ -1,7 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
+
+  Future<void> crearMensajePoc() async {
+    try {
+      await FirebaseFirestore.instance.collection('mensajes_poc').add({
+        'texto': 'Hola desde MyTeleton',
+        'creadoEn': FieldValue.serverTimestamp(),
+      });
+
+      debugPrint('Mensaje POC creado correctamente');
+    } catch (error) {
+      debugPrint('Error creando mensaje POC: $error');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,15 +40,17 @@ class HomeScreen extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: const Icon(
-              Icons.notifications_none,
-              color: Colors.white,
-            ),
+            icon: const Icon(Icons.notifications_none, color: Colors.white),
           ),
         ],
       ),
 
-      body: const SizedBox(),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: crearMensajePoc,
+          child: const Text('Crear mensaje POC'),
+        ),
+      ),
     );
   }
 }
