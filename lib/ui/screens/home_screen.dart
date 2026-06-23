@@ -43,10 +43,31 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("MyTeleton")),
+      appBar: AppBar(
+        title: Row(
+          children: [
+            Image.asset(
+              'assets/images/logo_volu.png',
+              width: 50,
+              height: 50,
+              fit: BoxFit.cover,
+            ),
+            SizedBox(width: 10),
+            Text(
+              "MyTeleton",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 30,
+              ),
+            ),
+          ],
+        ),
+        toolbarHeight: 80, //tamaño de la barra
+      ),
       body: Padding(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(16),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ElevatedButton(
               onPressed: crearMensajePoc,
