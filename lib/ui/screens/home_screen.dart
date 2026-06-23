@@ -1,54 +1,79 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
-  Future<void> crearMensajePoc() async {
-    try {
-      await FirebaseFirestore.instance.collection('mensajes_poc').add({
-        'texto': 'Hola desde MyTeleton',
-        'creadoEn': FieldValue.serverTimestamp(),
-      });
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
 
-      debugPrint('Mensaje POC creado correctamente');
-    } catch (error) {
-      debugPrint('Error creando mensaje POC: $error');
+class _HomeScreenState extends State<HomeScreen> {
+  String mensajesLeidos = '';
+
+  Future<void> crearMensajePoc() async {
+    await FirebaseFirestore.instance.collection('mensajes_poc').add({
+      'texto': 'Hola desde MyTeleton',
+      'creadoEn': FieldValue.serverTimestamp(),
+    });
+  }
+
+  Future<void> leerMensajes() async {
+    try {
+      QuerySnapshot snapshot = await FirebaseFirestore.instance
+          .collection('mensajes_poc')
+          .get();
+
+      String resultado = '';
+
+      for (var doc in snapshot.docs) {
+        resultado += '${doc['texto']}\n';
+      }
+
+      setState(() {
+        mensajesLeidos = resultado;
+      });
+    } catch (e) {
+      setState(() {
+        mensajesLeidos = 'Error: $e';
+      });
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      appBar: AppBar(title: const Text("MyTeleton")),
+      body: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          children: [
+            ElevatedButton(
+              onPressed: crearMensajePoc,
+              child: const Text("Crear mensaje"),
+            ),
 
-      appBar: AppBar(
-        backgroundColor: Colors.red,
-        elevation: 0,
-        centerTitle: true,
-        toolbarHeight: 75,
+            const SizedBox(height: 10),
 
-        title: const Text(
-          "MyTeleton",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 28,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+            ElevatedButton(
+              onPressed: leerMensajes,
+              child: const Text("Leer mensajes"),
+            ),
 
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.notifications_none, color: Colors.white),
-          ),
-        ],
-      ),
+            const SizedBox(height: 20),
 
-      body: Center(
-        child: ElevatedButton(
-          onPressed: crearMensajePoc,
-          child: const Text('Crear mensaje POC'),
+            Expanded(
+              child: Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  border: Border.all(),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: SingleChildScrollView(child: Text(mensajesLeidos)),
+              ),
+            ),
+          ],
         ),
       ),
     );
