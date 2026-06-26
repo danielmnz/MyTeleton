@@ -70,6 +70,151 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Text(
+              "Bienvenid@ voluntari@",
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.black,
+                fontStyle: FontStyle.italic,
+              ),
+            ),
+
+            const SizedBox(height: 20),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Expanded(
+                  child: Card(
+                    elevation: 6,
+                    clipBehavior: Clip.hardEdge,
+                    child: InkWell(
+                      onTap: () {}, //agregar funcionalidad despues
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/images/logo_volu.png',
+                            fit: BoxFit.cover,
+                          ),
+                          SizedBox(height: 10),
+                          Center(
+                            child: Text(
+                              "Perfil",
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontStyle: FontStyle.italic,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                        ],
+                      ),
+                    ),
+                  )
+                ),
+
+                const SizedBox(width: 10),
+
+                Expanded(
+                  child: Card(
+                    elevation: 6,
+                    clipBehavior: Clip.hardEdge,
+                    child: InkWell(
+                      onTap: () {}, //agregar funcionalidad despues
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/images/logo_volu.png',
+                            fit: BoxFit.cover,
+                          ),
+                          SizedBox(height: 10),
+                          Center(
+                            child: Text(
+                              "Programas",
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontStyle: FontStyle.italic,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                        ],
+                      ),
+                    ),
+                  )
+                ),
+              ],
+            ),
+
+            const SizedBox(height: 10),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Expanded(
+                  child: Card(
+                    elevation: 6,
+                    clipBehavior: Clip.hardEdge,
+                    child: InkWell(
+                      onTap: () {}, //agregar funcionalidad despues
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/images/logo_volu.png',
+                            fit: BoxFit.cover,
+                          ),
+                          SizedBox(height: 10),
+                          Center(
+                            child: Text(
+                              "Actividades",
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontStyle: FontStyle.italic,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                        ],
+                      ),
+                    ),
+                  )
+                ),
+
+                const SizedBox(width: 10),
+
+                Expanded(
+                  child: Card(
+                    elevation: 6,
+                    clipBehavior: Clip.hardEdge,
+                    child: InkWell(
+                      onTap: () {}, //agregar funcionalidad despues
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/images/logo_volu.png',
+                            fit: BoxFit.cover,
+                          ),
+                          SizedBox(height: 10),
+                          Center(
+                            child: Text(
+                              "Asistencia",
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontStyle: FontStyle.italic,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                        ],
+                      ),
+                    ),
+                  )
+                ),
+              ],
+            ),
+
+            const SizedBox(height: 20),
+            
             ElevatedButton(
               onPressed: crearMensajePoc,
               child: const Text("Crear mensaje"),
