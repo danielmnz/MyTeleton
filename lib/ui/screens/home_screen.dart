@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:myteleton/ui/screens/activity_screen.dart';
+import 'package:myteleton/ui/screens/attendance_screen.dart';
+import 'package:myteleton/ui/screens/profile_screen.dart';
+import 'package:myteleton/ui/screens/programs_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -90,7 +94,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Colors.orange,
                     clipBehavior: Clip.hardEdge,
                     child: InkWell(
-                      onTap: () {}, //agregar funcionalidad despues
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const ProfileScreen()),
+                        );
+                      }, //agregar funcionalidad despues
                       child: Column(
                         children: [
                           Image.asset(
@@ -126,7 +135,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Colors.blue,
                     clipBehavior: Clip.hardEdge,
                     child: InkWell(
-                      onTap: () {}, //agregar funcionalidad despues
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const ProgramsScreen()),
+                        );
+                      }, //agregar funcionalidad despues
                       child: Column(
                         children: [
                           Image.asset(
@@ -167,7 +181,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Colors.green,
                     clipBehavior: Clip.hardEdge,
                     child: InkWell(
-                      onTap: () {}, //agregar funcionalidad despues
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const ActivityScreen()),
+                        );
+                      }, //agregar funcionalidad despues
                       child: Column(
                         children: [
                           Image.asset(
@@ -203,7 +222,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Colors.purple,
                     clipBehavior: Clip.hardEdge,
                     child: InkWell(
-                      onTap: () {}, //agregar funcionalidad despues
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const AttendanceScreen()),
+                        );
+                      }, //agregar funcionalidad despues
                       child: Column(
                         children: [
                           Image.asset(

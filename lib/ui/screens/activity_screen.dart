@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class AttendanceScreen extends StatelessWidget {
-  const AttendanceScreen({super.key});
+class ActivityScreen extends StatelessWidget {
+  const ActivityScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class AttendanceScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-              "Asistencia",
+              "Actividades",
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 30,
