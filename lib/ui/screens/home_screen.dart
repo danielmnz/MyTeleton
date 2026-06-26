@@ -75,11 +75,11 @@ class _HomeScreenState extends State<HomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Bienvenid@ voluntari@",
+              "Bienvenid@ voluntari@ :)",
               style: TextStyle(
                 fontSize: 20,
                 color: Colors.black,
-                fontStyle: FontStyle.italic,
+                //fontStyle: FontStyle.italic,
               ),
             ),
 
@@ -239,7 +239,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           SizedBox(height: 10),
                           Center(
                             child: Text(
-                              "Asistencia",
+                              "REVISAR EN QUÉ DEJAMOS ESTE BOTÓN",
                               style: TextStyle(
                                 fontSize: 18,
                                 //fontStyle: FontStyle.italic,
