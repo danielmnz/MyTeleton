@@ -87,22 +87,27 @@ class _HomeScreenState extends State<HomeScreen> {
                 Expanded(
                   child: Card(
                     elevation: 6,
+                    color: Colors.orange,
                     clipBehavior: Clip.hardEdge,
                     child: InkWell(
                       onTap: () {}, //agregar funcionalidad despues
                       child: Column(
                         children: [
                           Image.asset(
-                            'assets/images/logo_volu.png',
-                            fit: BoxFit.cover,
+                            'assets/images/volu1.png',
+                            width: 200,
+                            height: 200,
+                            //fit: BoxFit.cover,
                           ),
                           SizedBox(height: 10),
                           Center(
                             child: Text(
                               "Perfil",
                               style: TextStyle(
-                                fontSize: 15,
-                                fontStyle: FontStyle.italic,
+                                fontSize: 18,
+                                //fontStyle: FontStyle.italic,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
                               ),
                             ),
                           ),
@@ -118,22 +123,27 @@ class _HomeScreenState extends State<HomeScreen> {
                 Expanded(
                   child: Card(
                     elevation: 6,
+                    color: Colors.blue,
                     clipBehavior: Clip.hardEdge,
                     child: InkWell(
                       onTap: () {}, //agregar funcionalidad despues
                       child: Column(
                         children: [
                           Image.asset(
-                            'assets/images/logo_volu.png',
-                            fit: BoxFit.cover,
+                            'assets/images/volu2.png',
+                            width: 200,
+                            height: 200,
+                            //fit: BoxFit.cover,
                           ),
                           SizedBox(height: 10),
                           Center(
                             child: Text(
                               "Programas",
                               style: TextStyle(
-                                fontSize: 15,
-                                fontStyle: FontStyle.italic,
+                                fontSize: 18,
+                                //fontStyle: FontStyle.italic,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
                               ),
                             ),
                           ),
@@ -154,22 +164,27 @@ class _HomeScreenState extends State<HomeScreen> {
                 Expanded(
                   child: Card(
                     elevation: 6,
+                    color: Colors.green,
                     clipBehavior: Clip.hardEdge,
                     child: InkWell(
                       onTap: () {}, //agregar funcionalidad despues
                       child: Column(
                         children: [
                           Image.asset(
-                            'assets/images/logo_volu.png',
-                            fit: BoxFit.cover,
+                            'assets/images/volu3.png',
+                            width: 200,
+                            height: 200,
+                            //fit: BoxFit.cover,
                           ),
                           SizedBox(height: 10),
                           Center(
                             child: Text(
                               "Actividades",
                               style: TextStyle(
-                                fontSize: 15,
-                                fontStyle: FontStyle.italic,
+                                fontSize: 18,
+                                //fontStyle: FontStyle.italic,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
                               ),
                             ),
                           ),
@@ -185,22 +200,27 @@ class _HomeScreenState extends State<HomeScreen> {
                 Expanded(
                   child: Card(
                     elevation: 6,
+                    color: Colors.purple,
                     clipBehavior: Clip.hardEdge,
                     child: InkWell(
                       onTap: () {}, //agregar funcionalidad despues
                       child: Column(
                         children: [
                           Image.asset(
-                            'assets/images/logo_volu.png',
-                            fit: BoxFit.cover,
+                            'assets/images/volu4.png',
+                            width: 200,
+                            height: 200,
+                            //fit: BoxFit.cover,
                           ),
                           SizedBox(height: 10),
                           Center(
                             child: Text(
                               "Asistencia",
                               style: TextStyle(
-                                fontSize: 15,
-                                fontStyle: FontStyle.italic,
+                                fontSize: 18,
+                                //fontStyle: FontStyle.italic,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
                               ),
                             ),
                           ),
