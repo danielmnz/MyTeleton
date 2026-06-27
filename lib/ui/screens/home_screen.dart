@@ -287,6 +287,73 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
+
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.primary,
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 90,
+                    height: 90,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      image: const DecorationImage(
+                        image: AssetImage(
+                          'assets/images/volu3.png', //poner logo del voluntariado que pertence
+                        ),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+
+                  const Text(
+                    "nombre_usuario",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            ListTile(
+              leading: const Icon(Icons.notifications),
+              title: const Text("Notificaciones"),
+              onTap: () {
+                //futura pantalla
+              },
+            ),
+
+            Divider(indent: 15, endIndent: 15),
+
+            ListTile(
+              leading: const Icon(Icons.settings),
+              title: const Text("Configuración"),
+              onTap: () {
+                //futura pantalla
+              },
+            ),
+
+            Divider(indent: 15, endIndent: 15),
+
+            ListTile(
+              leading: const Icon(Icons.info),
+              title: const Text("Acerca de"),
+              onTap: () {
+                //futura pantalla
+              },
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
