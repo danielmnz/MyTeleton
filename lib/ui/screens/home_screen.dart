@@ -52,18 +52,15 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Row(
           children: [
             Image.asset(
-              'assets/images/logo_volu.png',
+              'assets/images/MyVolunteerLogo.png',
               width: 50,
               height: 50,
               fit: BoxFit.cover,
             ),
             SizedBox(width: 10),
             Text(
-              "MyTeleton",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 30,
-              ),
+              "MyVolunteer",
+              style: TextStyle(color: Colors.white, fontSize: 30),
             ),
           ],
         ),
@@ -97,15 +94,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => const ProfileScreen()),
+                          MaterialPageRoute(
+                            builder: (context) => const ProfileScreen(),
+                          ),
                         );
                       }, //agregar funcionalidad despues
                       child: Column(
                         children: [
                           Image.asset(
                             'assets/images/volu1.png',
-                            width: 200,
-                            height: 200,
+                            width: 150,
+                            height: 150,
                             //fit: BoxFit.cover,
                           ),
                           SizedBox(height: 10),
@@ -124,7 +123,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ],
                       ),
                     ),
-                  )
+                  ),
                 ),
 
                 const SizedBox(width: 10),
@@ -138,15 +137,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => const ProgramsScreen()),
+                          MaterialPageRoute(
+                            builder: (context) => const ProgramsScreen(),
+                          ),
                         );
                       }, //agregar funcionalidad despues
                       child: Column(
                         children: [
                           Image.asset(
                             'assets/images/volu2.png',
-                            width: 200,
-                            height: 200,
+                            width: 150,
+                            height: 150,
                             //fit: BoxFit.cover,
                           ),
                           SizedBox(height: 10),
@@ -165,7 +166,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ],
                       ),
                     ),
-                  )
+                  ),
                 ),
               ],
             ),
@@ -184,15 +185,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => const ActivityScreen()),
+                          MaterialPageRoute(
+                            builder: (context) => const ActivityScreen(),
+                          ),
                         );
                       }, //agregar funcionalidad despues
                       child: Column(
                         children: [
                           Image.asset(
                             'assets/images/volu3.png',
-                            width: 200,
-                            height: 200,
+                            width: 150,
+                            height: 150,
                             //fit: BoxFit.cover,
                           ),
                           SizedBox(height: 10),
@@ -211,7 +214,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ],
                       ),
                     ),
-                  )
+                  ),
                 ),
 
                 const SizedBox(width: 10),
@@ -225,21 +228,23 @@ class _HomeScreenState extends State<HomeScreen> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => const AttendanceScreen()),
+                          MaterialPageRoute(
+                            builder: (context) => const AttendanceScreen(),
+                          ),
                         );
                       }, //agregar funcionalidad despues
                       child: Column(
                         children: [
                           Image.asset(
                             'assets/images/volu4.png',
-                            width: 200,
-                            height: 200,
+                            width: 150,
+                            height: 150,
                             //fit: BoxFit.cover,
                           ),
                           SizedBox(height: 10),
                           Center(
                             child: Text(
-                              "REVISAR EN QUÉ DEJAMOS ESTE BOTÓN",
+                              "Funcion pendiente",
                               style: TextStyle(
                                 fontSize: 18,
                                 //fontStyle: FontStyle.italic,
@@ -252,13 +257,13 @@ class _HomeScreenState extends State<HomeScreen> {
                         ],
                       ),
                     ),
-                  )
+                  ),
                 ),
               ],
             ),
 
             const SizedBox(height: 20),
-            
+
             ElevatedButton(
               onPressed: crearMensajePoc,
               child: const Text("Crear mensaje"),
@@ -315,10 +320,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                   const Text(
                     "nombre_usuario",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                    ),
+                    style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                 ],
               ),
